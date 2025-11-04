@@ -18,14 +18,14 @@ body {
 .top-bar {
     background: #006a4e;
     color: #fff;
-    padding: 10px 0;
+    padding: 5px 0;
     font-size: 14px;
 }
 
 .top-bar-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,9 +58,18 @@ header {
     margin: 0 auto;
     padding: 0 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
+/* Logo Container - Horizontal Layout */
 .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
     font-size: 56px;
     font-weight: 700;
     color: #fff;
@@ -68,12 +77,97 @@ header {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
+/* Circular Logo Image in Middle */
+.logo-img-large {
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    background: #fff;
+    padding: 5px;
+}
+
+/* Split text styling */
+.logo span {
+    display: flex;
+    gap: 20px;
+}
+
+/* Tagline */
 .tagline {
     font-size: 16px;
     color: #fff;
     margin-top: 8px;
     font-weight: 400;
     opacity: 0.95;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 36px;
+        gap: 15px;
+    }
+    
+    .logo-img-large {
+        height: 60px;
+        width: 60px;
+        border: 3px solid #fff;
+    }
+    
+    .logo span {
+        gap: 15px;
+    }
+    
+    .tagline {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 28px;
+        gap: 10px;
+    }
+    
+    .logo-img-large {
+        height: 50px;
+        width: 50px;
+        border: 2px solid #fff;
+        padding: 3px;
+    }
+    
+    .logo span {
+        gap: 10px;
+    }
+    
+    .tagline {
+        font-size: 12px;
+    }
+}
+
+
+.logo-img-large {
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3), 0 0 20px rgba(255,255,255,0.5);
+    background: #fff;
+    padding: 5px;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3), 0 0 20px rgba(255,255,255,0.5);
+    }
+    to {
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3), 0 0 30px rgba(255,255,255,0.8);
+    }
 }
 
 /* Navigation */
